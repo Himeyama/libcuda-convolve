@@ -11,7 +11,7 @@ NVCC = nvcc
 libcuda-convolve.so: cuda-convolve.cu float-vector.cu
 	$(NVCC) $(OPT) --shared -Xcompiler -fPIC $^ -o $@
 
-install: libcuda-convolve.so libfloat-vector.so
+install: libcuda-convolve.so
 	install -s $^ $(libdir)
 	cp cuda-convolve.h $(incdir)
 	cp float-vector.h $(incdir)
