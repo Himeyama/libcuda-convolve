@@ -16,7 +16,7 @@ FloatVec convolve(FloatVec a, FloatVec v){
     float* ga = fary2cuda(a);
     float* gv = fary2cuda(v);
     float* gconv = fary2cuda(conv);
-    cuda_convolve_full<<<1, 256>>>(ga, gv, gconv, a, v);
+    cuda_convolve_full<<<(a.size+256)/256, 256>>>(ga, gv, gconv, a, v);
     cudaDeviceSynchronize();
     cudaMemcpy(conv.data, gconv, conv.bytes, cudaMemcpyDeviceToHost);
     cudaFree(ga);
