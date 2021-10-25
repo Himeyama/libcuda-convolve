@@ -13,3 +13,6 @@ libcuda-convolve.so: cuda-convolve.cu float_vector.cu
 
 install: libcuda-convolve.so
 	install -s $< $(libdir)
+	install -s cuda-convolve.h $(incdir)
+	install -s float_vector.h $(incdir)
+
