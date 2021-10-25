@@ -1,4 +1,4 @@
-#include "float_vector.h"
+#include "float-vector.h"
 #define max(a, b) ((a > b) ? a : b)
 
 __global__

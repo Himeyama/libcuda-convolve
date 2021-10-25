@@ -4,7 +4,7 @@
  *  source: https://github.com/example-cuda
 */
 
-#include "float_vector.h"
+#include "float-vector.h"
 
 #ifndef CUDA_CONVOLVE_H
 #define CUDA_CONVOLVE_H
