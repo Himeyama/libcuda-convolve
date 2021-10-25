@@ -22,5 +22,5 @@ libfloat-vector.so: float-vector.cu
 install: libcuda-convolve.so libfloat-vector.so
 	install -s $^ $(libdir)
 	cp cuda-convolve.h $(incdir)
-	cp float_vector.h $(incdir)
+	cp float-vector.h $(incdir)
 
