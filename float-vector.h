@@ -13,8 +13,8 @@ typedef struct __FloatVec{
     long bytes;
 } FloatVec;
 
-void init_FloatVec(FloatVec *a, long size);
-void printVec(FloatVec a);
-float* fary2cuda(FloatVec a);
+extern "C" void init_FloatVec(FloatVec *a, long size);
+extern "C" void printVec(FloatVec a);
+extern "C" float* fary2cuda(FloatVec a);
 
 #endif
