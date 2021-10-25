@@ -9,6 +9,8 @@
 #ifndef CUDA_CONVOLVE_H
 #define CUDA_CONVOLVE_H
 
-void test();
+FloatVec convolve(FloatVec a, FloatVec v);
+FloatVec convolve_same(FloatVec a, FloatVec v);
+FloatVec convolve_valid(FloatVec a, FloatVec v);
 
 #endif
