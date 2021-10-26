@@ -8,8 +8,11 @@ NVCC = nvcc
 	-gencode arch=compute_70,code=sm_70 \
 	-gencode arch=compute_75,code=sm_75
 
-libcuda-convolve.so: cuda-convolve.cu float-vector.cu
+libcuda-convolve.so: cuda-convolve.cu
 	$(NVCC) $(OPT) --shared -Xcompiler -fPIC $^ -o $@
+
+test: test.cpp
+	$(NVCC) $(OPT) $^ -lcuda-convolve -L. -I. -o $@
 
 install: libcuda-convolve.so
 	install -s $^ $(libdir)
