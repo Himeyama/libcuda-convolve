@@ -16,6 +16,4 @@ test: test.cpp
 
 install: libcuda-convolve.so
 	install -s $^ $(libdir)
-	cp cuda-convolve.h $(incdir)
-	cp float-vector.h $(incdir)
-
+	cp cuda-convolve.hpp $(incdir)
